@@ -1,0 +1,27 @@
+{
+  "name": "studynode",
+  "version": "1.0.0",
+  "description": "Hoc nodejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sangotiss/nodejss.git"
+  },
+  "keywords": [
+    "nodejs",
+    "react"
+  ],
+  "author": "Sam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sangotiss/nodejss/issues"
+  },
+  "homepage": "https://github.com/Sangotiss/nodejss#readme",
+  "dependencies": {
+    "express": "4.21.2"
+  }
+}
