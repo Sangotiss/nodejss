@@ -1,11 +1,21 @@
-const http = require('http');
-const hostname = '127.0.0.1';
-const port = 3000;
-const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello World\n Sam');
-});
-server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+const express = require('express')
+
+//Cấu hình View Engine trong Express.js để hiển thị giao diện bằng EJS hoặc một template engine khác.
+const app = express();
+const configViewEngine = require('./src/config/viewEngine');
+configViewEngine(app);
+
+//cau hinh duong dan vao route
+const wedRoutes = require('./src/routes/wed');
+app.use('/', wedRoutes);
+
+require('dotenv').config();//app express
+
+const port = process.env.PORT || 8888;
+const hostname = process.env.HOST_NAME;
+const http = process.env.HTTP;
+
+
+app.listen(port, http => {
+    console.log(`Server is running at http://127.0.0.1:${port}`)
+})
